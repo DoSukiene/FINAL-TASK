@@ -8,10 +8,34 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    pasword:"",
+    database:"festival_partners"
+})
+
+connection.connect((error) => {
+    if(error)
+    throw error;
+    console.log("Connected to the database");
+})
+
 app.get("/get-AllPartners", (req, res) => {
-    fs.readFile('AllPartners.json', "utf8", (err, data) => {
-        res.send(JSON.stringify({ "status": 200, "error": null, "response": JSON.parse(data) }))
-    })
+
+   const sqlQuery = "SELECT * FROM partners";
+   connection.query(sqlQuery, (error, results) => {
+    if(error)
+    throw error;
+    res.send(JSON.stringify({ "status": 200, "error": null, "response": {Partners: results} }))
+   })
+   
+   
+    //fs.readFile('AllPartners.json', "utf8", (err, data) => {
+    //    res.send(JSON.stringify({ "status": 200, "error": null, "response": JSON.parse(data) }))
+   // })
 })
 
 app.post("/add-Partners", (req, res) => {
@@ -22,14 +46,24 @@ app.post("/add-Partners", (req, res) => {
         brand: req.body.fbrand,
         wwwsocial: req.body.fwww,
         message: req.body.fmessage,
-    }
-    fs.readFile('AllPartners.json', "utf8", (err, data) => {
-        const Partners = JSON.parse(data);
-        Partners.Partners.push(newPartners);
-        fs.writeFile('AllPartners.json', JSON.stringify(Partners, null, 3), function (err) {
-            res.send("Partner is added");
-        });
+    };
+    
+    const sqlQuery = "INSERT INTO partners (name, email, phone, brand, wwwsocial, message) VALUES ('" + 
+    newPartners.name + "','"+ newPartners.email + "','" + newPartners.phone + "','" + newPartners.brand + "','" + newPartners.wwwsocial + "','" +
+    newPartners.message +"')";
+    connection.query(sqlQuery, (error, results) => {
+     if(error)
+     throw error;
+     res.send(JSON.stringify({ "status": 200, "error": null, "response": "Customer ID :" + results.insertId + "created" }))
     })
+
+    //fs.readFile('AllPartners.json', "utf8", (err, data) => {
+    //    const Partners = JSON.parse(data);
+    //    Partners.Partners.push(newPartners);
+    //    fs.writeFile('AllPartners.json', JSON.stringify(Partners, null, 3), function (err) {
+    //        res.send("Partner is added");
+    //    });
+    //})
 
 })
 
