@@ -1,5 +1,6 @@
 body {
-  background-image: url(pictures/burning.jpg);
+  /* background-image: url(pictures/burning.jpg); */
+  background-color: black;
   background-repeat: repeat;
   background-size: cover;
 
@@ -7,12 +8,11 @@ body {
 
 
 body.schedule {
-  background-image: url(pictures/program.jpg);
+  background-image: url(pictures/burning.jpg);
   background-repeat: repeat;
   background-size: cover;
 
 }
-
 
 a:hover {
   color: #FFC0CB
