@@ -1,0 +1,56 @@
+.accordion {
+  width: 100%;
+  margin: 10px;
+  color: #5a5a5a;
+  background-color: white;
+  padding: 25px 25px;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 24px;
+  color: #5a5a5a;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: "+";
+  color: #5a5a5a;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 24px;
+  transform: translateY(-50%);
+}
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height: 0;
+  font-size: 16px;
+  text-align: justify;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.accordion .container.active .content {
+  height: 100%;
+}
+
+.accordion .container.active .label::before {
+  content: "x";
+  font-size: 30px;
+}
+
+.accordion hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid #b5b3b3;
+}
