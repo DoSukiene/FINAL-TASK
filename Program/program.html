@@ -24,6 +24,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 
     <script src="scripts/timer.js"></script>
+    <script src="scripts/script.js"></script>
 
     <style>
         .bd-placeholder-img {
@@ -79,9 +80,9 @@
         }
     </style>
 
-
-    <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/947e6fb6f8.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -103,10 +104,11 @@
                         <a class="nav-link active" aria-current="page" href="#">About the Festival</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Program 2023</a>
+                        <a class="nav-link" href="program.html">Program 2023</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Partners</a>
+                        <a class="nav-link" href="Partners/frontend/Partners.html">Partners</a>
+                        <!-- <a class="nav-link disabled">Partners</a> -->
                     </li>
                 </ul>
                 <!--
@@ -116,12 +118,12 @@
                     </form>
                     -->
 
-                    <style>
-                        .timer {
-                            color: whitesmoke;
-                        }
-                    </style>
-                    <p class="timer" id="timer"></p>
+                <style>
+                    .timer {
+                        color: whitesmoke;
+                    }
+                </style>
+                <p class="timer" id="timer"></p>
             </div>
         </div>
     </nav>
@@ -143,7 +145,7 @@
                     It’s a city wherein almost everything that happens is created entirely by its citizens,
                     who are active participants in the experience.
                 </p>
-                <p class="lead">See you in the dust! <a href="https://tickets.burningman.org/">Buy ticket</a></p>
+                <p class="lead">See you in the dust!</p>
             </div>
             <div class="col-md-5">
                 <img src="pictures/program.jpg" height="400" width="500">
@@ -184,6 +186,7 @@
                     regenerative cycles for food,
                     water, power, shelter, waste, and air. Sign up for a nature walk and read our
                     survival guide to visit.</p>
+                <p class="lead">Need more information, please <a href="mailto:burningman@gmail.com">email us!</a></p>
             </div>
             <div class="col-md-5">
                 <img src="pictures/fl2.jpg" height="400" width="300">
@@ -203,18 +206,9 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p>©1989-2022 burning man project</p>
         <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-dark" href="https://twitter.com/burningman"><svg class="bi" width="24"
-                        height="24">
-                        <use xlink:href="#twitter"></use>
-                    </svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/burningman/"><svg class="bi"
-                        width="24" height="24">
-                        <use xlink:href="#instagram"></use>
-                    </svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="https://www.facebook.com/burningman"><svg class="bi" width="24"
-                        height="24">
-                        <use xlink:href="#facebook"></use>
-                    </svg></a></li>
+           <a href="https://twitter.com/burningman"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://www.instagram.com/burningman/"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.facebook.com/burningman"><i class="fa-brands fa-square-instagram"></i></a>
         </ul>
     </div>
 </footer>

@@ -24,6 +24,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 
     <script src="scripts/timer.js"></script>
+    <script src="scripts/script.js"></script>
 
     <style>
         .bd-placeholder-img {
@@ -79,9 +80,9 @@
         }
     </style>
 
-
-    <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/947e6fb6f8.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -103,10 +104,11 @@
                         <a class="nav-link active" aria-current="page" href="#">About the Festival</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Program 2023</a>
+                        <a class="nav-link" href="program.html">Program 2023</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Partners</a>
+                        <a class="nav-link" href="Partners/frontend/Partners.html">Partners</a>
+                        <!-- <a class="nav-link disabled">Partners</a> -->
                     </li>
                 </ul>
                 <!--
@@ -131,68 +133,199 @@
 
     <div class="container">
 
-        <p class="lead">Black Rock City 2023</p>
-
-        <!--  <p class="lead">Once a year, tens of thousands of people gather in Nevada’s Black Rock Desert to create Black
-            Rock City,
-            a temporary metropolis dedicated to community, art, self-expression, and self-reliance.
-            In this crucible of creativity, all are welcome.</p>   -->
-
-        <p class="lead">August 28, 2023
-
         <table class="lead">
-            <tr>
-                <th>Event</th>
-                <th>Time</th>
-            </tr>
-            <tr>
-                <td>Join us for tea and banter</td>
-                <td>8 AM – 11 AM</td>
-            </tr>
-            <tr>
-                <td>The Quantic Man. Einstein versus Galileo</td>
-                <td>8 AM – 12 PM</td>
-            </tr>
-            <tr>
-                <td>Film Maker/ Content Creator Meet and Greet</td>
-                <td>10 AM – 11 AM</td>
-            </tr>
-            <tr>
-                <td>Brain Freeze Margarita Bar</td>
-                <td>11 AM – 7 PM</td>
-            </tr>
-            <tr>
-                <td>YOUniversal Teahouse</td>
-                <td>12 PM – 8 PM</td>
-            </tr>
-            <tr>
-                <td>Big balls & ice cold drinks? U better believe it!</td>
-                <td>6 PM – 7 PM</td>
-            </tr>
-            <tr>
-                <td> Temple Precession Ceremony - Rainbow Lightning</td>
-                <td>6 PM – 9 PM</td>
-            </tr>
-            <tr>
-                <td> Crazy Tea Party</td>
-                <td>6 PM – 11:45 PM</td>
-            </tr>
-            <tr>
-                <td> You'll Put Your Eye Out! Shooting Gallery</td>
-                <td>6 PM – 12 AM</td>
-            </tr>
-            <tr>
-                <td>Badlands Bordello</td>
-                <td>6 PM – 6:15 PM</td>
-            </tr>
-            <tr>
-                <td>Power Yoga Class</td>
-                <td>6 PM – 6:15 PM</td>
-            </tr>
-            <tr>
-                <td>Strangers With Candy</td>
-                <td>6 PM – 6 AM</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Starts</th>
+                    <th>Ends</th>
+                    <th>Event</th>
+                </tr>
+                <tr>
+                    <th>
+                        <select id="dateFilter" onchange="filter()">
+                            <option value=""></option>
+                            <option>28.08.2023</option>
+                            <option>29.08.2023</option>
+                            <option>30.08.2023</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select id="startsFilter" onchange="filter()">
+                            <option value=""></option>
+                            <option>12 AM</option>
+                            <option>1 AM</option>
+                            <option>2 AM</option>
+                            <option>3 AM</option>
+                            <option>4 AM</option>
+                            <option>5 AM</option>
+                            <option>6 AM</option>
+                            <option>7 AM</option>
+                            <option>8 AM</option>
+                            <option>9 AM</option>
+                            <option>10 AM</option>
+                            <option>11 AM</option>
+                            <option>12 PM</option>
+                            <option>1 PM</option>
+                            <option>2 PM</option>
+                            <option>3 PM</option>
+                            <option>4 PM</option>
+                            <option>5 PM</option>
+                            <option>6 PM</option>
+                            <option>7 PM</option>
+                            <option>8 PM</option>
+                            <option>9 PM</option>
+                            <option>10 PM</option>
+                            <option>11 PM</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select id="endsFilter" onchange="filter()">
+                            <option value=""></option>
+                            <option>12 AM</option>
+                            <option>1 AM</option>
+                            <option>2 AM</option>
+                            <option>3 AM</option>
+                            <option>4 AM</option>
+                            <option>5 AM</option>
+                            <option>6 AM</option>
+                            <option>7 AM</option>
+                            <option>8 AM</option>
+                            <option>9 AM</option>
+                            <option>10 AM</option>
+                            <option>11 AM</option>
+                            <option>12 PM</option>
+                            <option>1 PM</option>
+                            <option>2 PM</option>
+                            <option>3 PM</option>
+                            <option>4 PM</option>
+                            <option>5 PM</option>
+                            <option>6 PM</option>
+                            <option>7 PM</option>
+                            <option>8 PM</option>
+                            <option>9 PM</option>
+                            <option>10 PM</option>
+                            <option>11 PM</option>
+                        </select>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tableRows">
+                <tr>
+                    <td>28.08.2023</td>
+                    <td>8 AM</td>
+                    <td>11 AM</td>
+                    <td>Join us for tea and banter</td>
+                </tr>
+                <tr>
+                    <td>28.08.2023</td>
+                    <td>8 AM</td>
+                    <td>12 PM</td>
+                    <td>The Quantic Man. Einstein versus Galileo</td>
+                </tr>
+                <tr>
+                    <td>30.08.2023</td>
+                    <td>10 AM</td>
+                    <td>11 AM</td>
+                    <td>Film Maker/ Content Creator Meet and Greet</td>
+                </tr>
+                <tr>
+                    <td>30.08.2023</td>
+                    <td>11 AM</td>
+                    <td>7 PM</td>
+                    <td>Brain Freeze Margarita Bar</td>
+                </tr>
+                <tr>
+                    <td>29.08.2023</td>
+                    <td>12 PM</td>
+                    <td>8 PM</td>
+                    <td>YOUniversal Teahouse</td>
+                </tr>
+                <tr>
+                    <td>28.08.2023</td>
+                    <td>6 PM</td>
+                    <td>7 PM</td>
+                    <td>Big balls & ice cold drinks? U better believe it!</td>
+                </tr>
+                <tr>
+                    <td>29.08.2023</td>
+                    <td>6 PM</td>
+                    <td>9 PM</td>
+                    <td> Temple Precession Ceremony - Rainbow Lightning</td>
+                </tr>
+                <tr>
+                    <td>28.08.2023</td>
+                    <td>6 PM</td>
+                    <td>11 PM</td>
+                    <td> Crazy Tea Party</td>
+                </tr>
+                <tr>
+                    <td>30.08.2023</td>
+                    <td>6 PM</td>
+                    <td>12 AM</td>
+                    <td> You'll Put Your Eye Out! Shooting Gallery</td>
+                </tr>
+                <tr>
+                    <td>29.08.2023</td>
+                    <td>6 PM</td>
+                    <td>7 PM</td>
+                    <td>Badlands Bordello</td>
+                </tr>
+                <tr>
+                    <td>28.08.2023</td>
+                    <td>6 PM</td>
+                    <td>7 PM</td>
+                    <td>Power Yoga Class</td>
+                </tr>
+                <tr>
+                    <td>29.08.2023</td>
+                    <td>6 PM</td>
+                    <td>7 PM</td>
+                    <td>Power Yoga Class</td>
+                </tr>
+                <tr>
+                    <td>30.08.2023</td>
+                    <td>6 PM</td>
+                    <td>7 PM</td>
+                    <td>Power Yoga Class</td>
+                </tr>
+                <tr>
+                    <td>30.08.2023</td>
+                    <td>6 PM </td>
+                    <td>6 AM</td>
+                    <td>Strangers With Candy</td>
+                </tr>
+                <tr>
+                    <td>29.08.2023</td>
+                    <td>3 PM </td>
+                    <td>3 AM</td>
+                    <td>Candy Candy</td>
+                </tr>                
+                <tr>
+                    <td>29.08.2023</td>
+                    <td>12 AM </td>
+                    <td>4 AM</td>
+                    <td>Shooting Gallery</td>
+                </tr>
+                <tr>
+                    <td>30.08.2023</td>
+                    <td>3 PM </td>
+                    <td>4 PM</td>
+                    <td>Brain Freeze</td>
+                </tr>
+                <tr>
+                    <td>30.08.2023</td>
+                    <td>6 AM </td>
+                    <td>7 PM</td>
+                    <td>Art review</td>
+                </tr>
+                <tr>
+                    <td>28.08.2023</td>
+                    <td>7 AM </td>
+                    <td>7 PM</td>
+                    <td>Bike ride</td>
+                </tr>
+            </tbody>
         </table>
 
     </div>
@@ -203,22 +336,12 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p>©1989-2022 burning man project</p>
         <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-dark" href="https://twitter.com/burningman"><svg class="bi" width="24"
-                        height="24">
-                        <use xlink:href="#twitter"></use>
-                    </svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/burningman/"><svg class="bi"
-                        width="24" height="24">
-                        <use xlink:href="#instagram"></use>
-                    </svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="https://www.facebook.com/burningman"><svg class="bi" width="24"
-                        height="24">
-                        <use xlink:href="#facebook"></use>
-                    </svg></a></li>
+           <a href="https://twitter.com/burningman"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://www.instagram.com/burningman/"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.facebook.com/burningman"><i class="fa-brands fa-square-instagram"></i></a>
         </ul>
     </div>
 </footer>
-
 
 
 </html>
