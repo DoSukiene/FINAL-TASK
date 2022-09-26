@@ -1,3 +1,20 @@
+footer a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #a45637;
+  transition: color 0.5s;
+}
+
+footer a:hover {
+  color: #FFC0CB
+}
+
+body {
+  background-color: #000000;
+
+}
+
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
