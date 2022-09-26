@@ -1,0 +1,68 @@
+{
+   "Partners": [
+      {
+         "name": "John",
+         "email": "coca.cola@gmail.com",
+         "phone": "880026531",
+         "brand": "Coca Cola",
+         "wwwsocial": "https://www.coca-cola.com/",
+         "message": "Hello, we would like to sponsor Burning Man festival"
+      },
+      {
+         "name": "Samantha",
+         "email": "fed.ex@gmail.com",
+         "phone": "886026541",
+         "brand": "FedEx",
+         "wwwsocial": "https://www.fedex.com/",
+         "message": "Hello, we would like to sponsor your event"
+      },
+      {
+         "name": "Ieva",
+         "email": "ieva@gmai.com",
+         "phone": "123456789",
+         "brand": "brand",
+         "wwwsocial": "www.brand.lt",
+         "message": "Hi"
+      },
+      {
+         "name": "Ieva",
+         "email": "ieva@gmai.com",
+         "phone": "123456789",
+         "brand": "brand",
+         "wwwsocial": "www.brand.lt",
+         "message": "Hi"
+      },
+      {
+         "name": "Ieva",
+         "email": "ieva@gmai.com",
+         "phone": "123456789",
+         "brand": "brand",
+         "wwwsocial": "www.brand.lt",
+         "message": "Hi"
+      },
+      {
+         "name": "Ieva",
+         "email": "ieva@gmai.com",
+         "phone": "123456789",
+         "brand": "brand",
+         "wwwsocial": "www.brand.lt",
+         "message": "Hi"
+      },
+      {
+         "name": "Ieva",
+         "email": "ieva@gmai.com",
+         "phone": "123456789",
+         "brand": "brand",
+         "wwwsocial": "www.brand.lt",
+         "message": "Hi"
+      },
+      {
+         "name": "Ieva",
+         "email": "ieva@gmai.com",
+         "phone": "123456789",
+         "brand": "brand",
+         "wwwsocial": "www.brand.lt",
+         "message": "Hi"
+      }
+   ]
+}
