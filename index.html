@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--<meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.101.0" />-->
+  <title>BURNING MAN</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+
+  <link href="styles/carousel.css" rel="stylesheet">
+  <link href="styles/gallery.css" rel="stylesheet">
+  <link href="styles/10principles.css" rel="stylesheet">
+  <!-- Added by Dovile-->
+  <link href="styles/style.css" rel="stylesheet">
+
+  <script src="scripts/timer.js"></script>
+
+  <!-- Added by Dovile-->
+  <script src="https://kit.fontawesome.com/947e6fb6f8.js" crossorigin="anonymous"></script>
+
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: solid rgba(0, 0, 0, 0.15);
+      border-width: 1px 0;
+      box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -0.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BURNING MAN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">About the Festival</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="program.html">Program 2023</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Partners.html">Partners</a>
+            </li>
+          </ul>
+
+          <style>
+            .timer {
+              color: whitesmoke;
+            }
+          </style>
+          <div id="timer" class="timer"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#212529" />
+            <image href="images/img1.png" alt="Totem of Confessions by Michael
+              Garlington 2015 " width="100%" height="100%"></image>
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>What Is Burning Man?</h1>
+              <p>The 10 Principles of Burning Man</p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#principle">Learn more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#212529" />
+            <image href="images/img3.png" alt="Temple and mountains in the evening." width="100%" height="100%"></image>
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>News & Storytelling</h1>
+              <p>
+                Burning Man culture is the sum of the experiences of the
+                people who take part in it.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#stories">Read the stories</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#212529" />
+            <image href="images/img5.png"
+              alt="A human-powered merry go round of stone and steel with mass akin to a freight train. 2012 Honoraria."
+              width="100%" height="100%"></image>
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Burning Man 2022 just ended and</h1>
+              <p>Here are our best photos.</p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#img-list">See the gallery</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container marketing" id="stories">
+      <div class="row">
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid meet" focusable="false">
+            <title>Story 1</title>
+            <image href="images/You-Are-Not-Alone.jpg" width="100%" height="100%"></image>
+          </svg>
+
+          <h2 class="fw-normal">Tales From The Playa</h2>
+          <p>
+            Burning Man 2022: How Life Imitated Art
+
+          </p>
+          <p>
+            <a class="btn btn-secondary"
+              href="https://journal.burningman.org/2022/09/black-rock-city/tales-from-the-playa/how-life-imitated-art/">View
+              details &raquo;</a>
+          </p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Story 2</title>
+
+            <image href="images/2022s_man.jpg" width="100%" height="100%"></image>
+          </svg>
+
+          <h2 class="fw-normal">'Finally'</h2>
+          <p>
+            After COVID hiatus, Burning Man returns to Nevada's Black Rock Desert
+          </p>
+          <p>
+            <a class="btn btn-secondary"
+              href="https://knpr.org/knpr/2022-08/finally-after-covid-hiatus-burning-man-returns-nevadas-black-rock-desert">View
+              details &raquo;</a>
+          </p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Story 3</title>
+            <image href="images/travelnevada.jpeg" width="100%" height="100%"></image>
+          </svg>
+
+          <h2 class="fw-normal">Burning Man 2023</h2>
+          <p>
+            Ready to start planning?
+          </p>
+          <p>
+            <a class="btn btn-secondary" href="https://travelnevada.com/event/burning-man/">View details &raquo;</a>
+          </p>
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+      <!-- /.row -->
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider" />
+
+      <div class="img-list" id="img-list" />
+      </li>
+      <li><img src="images/metamorphosis ballet.jpg" /></li>
+      <li><img src="images/the last ocean.jpg" /></li>
+      <li><img src="images/Black! Ase.jpg" /></li>
+      <li><img src="images/seed of dreams.jpg" /></li>
+      <li><img src="images/art car.jpg" /></li>
+      <li><img src="images/Petaled Portal.jpg" /></li>
+      <li><img src="images/Paradisium.jpg" /></li>
+      <li><img src="images/Infinity Temple.jpg" /></li>
+      <li><img src="images/Facing the Fearbeast.jpg" /></li>
+    </div>
+
+
+    <hr class="featurette-divider" />
+
+    <div class="row featurette">
+      <hr class="featurette-divider" />
+      <div class="col-sm-8" id="principle">
+        <h2>
+          The 10 Principles of Burning Man
+
+        </h2>
+        <div class="accordion-body">
+          <div class="accordion">
+            <div class="container">
+              <div class="label">Radical Inclusion</div>
+              <div class="content">
+                Anyone may be a part of Burning Man. We welcome and respect the stranger. No prerequisites exist for
+                participation in our community.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Gifting</div>
+              <div class="content">
+                Burning Man is devoted to acts of gift giving. The value of a gift is unconditional. Gifting does not
+                contemplate a return or an exchange for something of equal value.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Decommodification</div>
+              <div class="content">
+                In order to preserve the spirit of gifting, our community seeks to create social environments that are
+                unmediated by commercial sponsorships, transactions, or advertising. We stand ready to protect our
+                culture from such exploitation. We resist the substitution of consumption for participatory experience.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Radical Self-reliance
+              </div>
+              <div class="content">
+                Burning Man encourages the individual to discover, exercise and rely on their inner resources.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Radical Self-expression
+              </div>
+              <div class="content">
+                Radical self-expression arises from the unique gifts of the individual. No one other than the individual
+                or a collaborating group can determine its content. It is offered as a gift to others. In this spirit,
+                the giver should respect the rights and liberties of the recipient.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Communal Effort
+              </div>
+              <div class="content">
+                Our community values creative cooperation and collaboration. We strive to produce, promote and protect
+                social networks, public spaces, works of art, and methods of communication that support such
+                interaction.
+              </div>
+            </div>
+            <hr />
+
+            <div class="container">
+              <div class="label">Civic Responsibility
+              </div>
+              <div class="content">
+                We value civil society. Community members who organize events should assume responsibility for public
+                welfare and endeavor to communicate civic responsibilities to participants. They must also assume
+                responsibility for conducting events in accordance with local, state and federal laws.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Leaving No Trace
+              </div>
+              <div class="content">
+                Our community respects the environment. We are committed to leaving no physical trace of our activities
+                wherever we gather. We clean up after ourselves and endeavor, whenever possible, to leave such places in
+                a better state than when we found them.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Participation
+              </div>
+              <div class="content">
+                Our community is committed to a radically participatory ethic. We believe that transformative change,
+                whether in the individual or in society, can occur only through the medium of deeply personal
+                participation. We achieve being through doing. Everyone is invited to work. Everyone is invited to play.
+                We make the world real through actions that open the heart.
+              </div>
+            </div>
+            <hr />
+            <div class="container">
+              <div class="label">Immediacy
+              </div>
+              <div class="content">
+                Immediate experience is, in many ways, the most important touchstone of value in our culture. We seek to
+                overcome barriers that stand between us and a recognition of our inner selves, the reality of those
+                around us, participation in society, and contact with a natural world exceeding human powers. No idea
+                can substitute for this experience.
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+          height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>10 principles</title>
+          <image href="images/10principles.jpg" alt="The 10 Principles
+                " width="100%" height="100%"></image>
+        </svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider" />
+
+
+
+
+    <footer class="container">
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>©1989-2022 burning man project</p>
+        <ul class="list-unstyled d-flex">
+          <a href="https://twitter.com/burningman"><i class="fa-brands fa-square-twitter"></i></a>
+          <a href="https://www.instagram.com/burningman/"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://www.facebook.com/burningman"><i class="fa-brands fa-square-instagram"></i></a>
+        </ul>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <script src="scripts/accordion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

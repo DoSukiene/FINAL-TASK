@@ -11,6 +11,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="scripts/partners.js"></script>
   <script src="scripts/forbackend.js"></script>
+  <title>Partners</title>
 
   <!--Menu on the top of the page-->
   <meta charset="utf-8" />
@@ -26,7 +27,10 @@
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 
   <script src="scripts/timer.js"></script>
+
+  <!-- Added by Dovile-->
   <script src="https://kit.fontawesome.com/947e6fb6f8.js" crossorigin="anonymous"></script>
+
 
   <style>
     .bd-placeholder-img {
@@ -82,7 +86,9 @@
     }
   </style>
 
-  <link href="carousel.css" rel="stylesheet" />
+  <link href="styles/carousel.css" rel="stylesheet">
+  <!-- Added by Dovile-->
+  <link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -97,10 +103,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About the Festival</a>
+              <a class="nav-link active" aria-current="page" href="index.html">About the Festival</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="C:\Users\DELL\Documents\git\Final_Project\Program">Program 2023</a>
+              <a class="nav-link" href="program.html">Program 2023</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Partners.html">Partners</a>
@@ -183,7 +189,8 @@
     <h5>Complete the form below and we will contact you!</h5>
 
     <table class="center1">
-      <form method="POST" action="http://localhost:5000/add-Partners" action="javascript:void(0)" name="myForm" onsubmit="return validateForm()">
+      <form method="POST" action="http://localhost:5000/add-Partners" action="javascript:void(0)" name="myForm"
+        onsubmit="return validateForm()">
         <!--name-->
         <tr>
           <div class="mb-3">
@@ -278,12 +285,12 @@
 
 <footer class="container">
   <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>©1989-2022 burning man project</p>
-      <ul class="list-unstyled d-flex">
-         <a href="https://twitter.com/burningman"><i class="fa-brands fa-square-twitter"></i></a>
-          <a href="https://www.instagram.com/burningman/"><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="https://www.facebook.com/burningman"><i class="fa-brands fa-square-instagram"></i></a>
-      </ul>
+    <p>©1989-2023 burning man project</p>
+    <ul class="list-unstyled d-flex">
+      <a href="https://twitter.com/burningman"><i class="fa-brands fa-square-twitter"></i></a>
+      <a href="https://www.instagram.com/burningman/"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="https://www.facebook.com/burningman"><i class="fa-brands fa-square-instagram"></i></a>
+    </ul>
   </div>
 </footer>
 

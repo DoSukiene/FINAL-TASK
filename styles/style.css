@@ -1,9 +1,3 @@
-body {
-    /* background-image: url(pictures/burning.jpg); */
-    background-color: #000000;
-
-}
-
 select {
     background-color: #bed5ed;
 }
@@ -12,7 +6,6 @@ table.lead {
     color: #000000;
 
 }
-
 
 body.schedule {
     background-image: url(sp.jpg);
@@ -24,13 +17,13 @@ body.schedule {
 
 a {
     font-weight: 700;
+    color: #5a5a5a;
     text-decoration: none;
-    color: #a45637;
     transition: color 0.5s;
 }
 
 a:hover {
-    color: #FFC0CB
+    color: #ffa500
 }
 
 table {
